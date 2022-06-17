@@ -11,3 +11,4 @@ GRANT ALL PRIVILEGES ON DATABASE "student" to postgres
 \d
 
 sudo lsof -i -P | grep LISTEN | grep :$PORT
+\d student
