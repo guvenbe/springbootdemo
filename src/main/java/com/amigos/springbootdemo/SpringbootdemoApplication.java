@@ -18,18 +18,4 @@ public class SpringbootdemoApplication {
         SpringApplication.run(SpringbootdemoApplication.class, args);
     }
 
-    @GetMapping
-    public List<Student> hello(){
-        return List.of(
-                new Student(
-                        1L,
-                        "Mariam",
-                        "mariam.jamal@gmail.com",
-                        LocalDate.of(1966, Month.FEBRUARY,5),
-                        21
-
-                )
-        );
-    }
-
 }
