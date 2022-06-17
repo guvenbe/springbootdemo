@@ -38,7 +38,7 @@ public class StudentConfig {
                     29
             );
 
-            repository.saveAll(List.of(mariam, alex));
+            repository.saveAll(List.of(mariam, alex, john));
 
         };
 
