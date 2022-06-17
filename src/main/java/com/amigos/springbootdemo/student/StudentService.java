@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -26,6 +27,10 @@ public class StudentService {
     }
 
     public void addNewStudent(Student student) {
+        Optional<Student> studentByEmail = studentRepository.findStudentByEmail(student.getEmail());
+        if (studentByEmail.isPresent()) {
+            throw new IllegalStateException("email is taken");
+        }
         log.info("**************Adding Student:\n" + student);
         studentRepository.save(student);
     }
