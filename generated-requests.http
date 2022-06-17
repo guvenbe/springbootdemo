@@ -1,0 +1,32 @@
+### Put this in Scratches
+
+###
+POST http://localhost:8080/api/v1/student
+Content-Type: application/json
+
+{
+  "name": "Bora",
+  "email": "bilal.ahmed@gmail.com",
+  "dob": "1989-12-17"
+}
+
+<> 2022-06-17T173127.500.json
+<> 2022-06-17T172829.500.json
+<> 2022-06-17T172723.500.json
+
+###
+DELETE http://localhost:8080/api/v1/student/1
+
+###
+PUT http://localhost:8080/api/v1/student/1?name=Bob
+
+<> 2022-06-17T185753.405.json
+
+###
+PUT http://localhost:8080/api/v1/student/1?name=Bob
+
+###
+PUT http://localhost:8080/api/v1/student/1?email=Bob@myemail.com
+
+###
+PUT http://localhost:8080/api/v1/student/1?email=Bob@myemail.com@name=Ryan
